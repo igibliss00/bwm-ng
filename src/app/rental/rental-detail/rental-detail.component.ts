@@ -20,7 +20,7 @@ export class RentalDetailComponent implements OnInit {
     (params) => {
       this.getRental(params['rentalId']);
     })
-  }ß
+  }
 
   getRental(rentalId: string) {
     this.rentalService.getRentalById(rentalId).subscribe(
