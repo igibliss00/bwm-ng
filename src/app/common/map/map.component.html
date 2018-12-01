@@ -1,0 +1,21 @@
+<agm-map 
+  (mapReady)="mapReadyHandler()" 
+  [latitude]="lat" 
+  [longitude]="lng"
+  [zoom]="13">
+  <agm-circle *ngIf="!isPositionError"
+  [latitude]="lat" 
+  [longitude]="lng"
+  [radius]="800"
+  [fillColor]="'#f44336'"
+  [fillOpacity]="0.4">
+  </agm-circle>
+
+  <agm-info-window *ngIf="isPositionError"
+  [latitude]="lat" 
+  [longitude]="lng"
+  [maxWidth]="300"
+  [isOpen]=true>
+  Oops, there is a problem finding the location on the map. We are trying to resolve the problem as fast as possible.  Sorry for the inconvenience.     
+  </agm-info-window>
+</agm-map>
