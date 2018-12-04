@@ -13,7 +13,7 @@ export class MapService {
     private camelize(value: string): string{
         return this.camelizePipe.transform(value);
     }    
-
+    
     private cacheLocation(location: string, coordinates: any) {
         this.locationCache[this.camelize(location)] = coordinates;
     }
