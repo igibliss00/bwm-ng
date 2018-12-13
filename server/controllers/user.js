@@ -79,6 +79,7 @@ exports.authMiddleware = function(req, res, next) {
             }
             if (user) {
                 //suggested way from Express on how to pass an object
+                debugger;
                 res.locals.user = user;
                 next();
             } else {
